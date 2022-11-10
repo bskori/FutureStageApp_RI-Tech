@@ -1,0 +1,51 @@
+﻿@model AddmissionVM
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AddmissionPrerequisite</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Addmission Prerequisite</label>
+                <input asp-for="AdmissionPrerequisite" class="form-control" />
+                <span asp-validation-for="AdmissionPrerequisite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Prerequisite Description</label>
+                <input asp-for="PrerequisiteDesc" class="form-control" />
+                <span asp-validation-for="PrerequisiteDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Select School Standard</label>
+                <select asp-for="SchoolStandardID" asp-items="@ViewBag.SchoolStandard" class="form-control"></select>
+                <span asp-validation-for="SchoolStandardID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Addmission Process</label>
+                <input asp-for="AdmissionProcess" class="form-control" />
+                <span asp-validation-for="AdmissionProcess" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Process Description</label>
+                <input asp-for="ProcessDesc" class="form-control" />
+                <span asp-validation-for="ProcessDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

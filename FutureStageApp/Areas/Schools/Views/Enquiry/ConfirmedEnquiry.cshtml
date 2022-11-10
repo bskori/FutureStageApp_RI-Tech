@@ -1,0 +1,43 @@
+﻿@model IEnumerable<AddmissionEnquiry>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Enquiry</title>
+</head>
+<body>
+    <br />
+    <h4 class="text-center header alert-primary">Confirmed Enquiry List</h4>
+    <br />
+    <table class="table table-borderless table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Sr. No</th>
+                <th>School</th>
+                <th>Parent Name</th>
+                <th>Enquiry Description</th>
+                <th>Enquiry Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var temp in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@temp.AddmissionEnquiryID</td>
+                    <td>@temp.School.Name</td>
+                    <td>@temp.Parent.Name</td>
+                    <td>@temp.EnquiryDescription</td>
+                    <td>@temp.EnquiryDate</td>
+                    <td>
+                        <a asp-action="ConfirmedEnquiryDetails" class="btn btn-danger" asp-route-id="@temp.AddmissionEnquiryID">Details</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</body>
+</html>

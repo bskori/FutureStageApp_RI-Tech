@@ -1,0 +1,40 @@
+﻿@model Facility
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <br />
+    <br />
+    <h3 class="text-center alert-primary">Update Facility</h3>
+    <br />
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="FacilityID" />
+                <div class="form-group">
+                    <label class="control-label">Facility Title</label>
+                    <input asp-for="FaclilityTitle" class="form-control" />
+                    <span asp-validation-for="FaclilityTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Facility Description</label>
+                    <textarea asp-for="FaclilityDesc" class="form-control" ></textarea>
+                    <span asp-validation-for="FaclilityDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

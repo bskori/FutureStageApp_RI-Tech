@@ -1,0 +1,91 @@
+﻿@model School
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Preschool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/BackendAssets/assets/img/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/BackendAssets/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/BackendAssets/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/BackendAssets/assets/plugins/fontawesome/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="~/BackendAssets/assets/css/style.css">
+    <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.min.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="account-page">
+            <div class="container">
+                <h3 class="account-title text-white">Register</h3>
+                <div class="account-box">
+                    <div class="account-wrapper">
+                        <div class="account-logo">
+                            <a href="index.html"><img src="~/BackendAssets/assets/img/logo.png" alt="School-admin"></a>
+                        </div>
+                        <form asp-action="Register" method="post">
+                            <div class="form-group">
+                                <label>School Name </label>
+                                <input asp-for="Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Address </label>
+                                <input asp-for="Address" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Email ID</label>
+                                <input asp-for="EmailID" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact No</label>
+                                <input asp-for="ContactNo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Select Area</label>
+                                <select asp-for="AreaID" asp-items="ViewBag.Area" class="form-control"></select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input asp-for="Password" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Establishment Date</label>
+                                <input asp-for="EstablishmentDate" class="form-control">
+                            </div>
+                            <div class="form-group text-center custom-mt-form-group">
+                                <button class="btn btn-primary btn-block account-btn" type="submit">Register</button>
+                            </div>
+                            <div class="text-center">
+                                <a asp-action="doLogin">Already have an account?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/BackendAssets/assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="~/BackendAssets/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/BackendAssets/assets/js/jquery.slimscroll.js"></script>
+
+    <script src="~/BackendAssets/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model StandardFees
+
+<div class="modal fade" id="addFees">
+    <div class="modal-dialog">
+        <duv class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="addFees">Add Fees</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>x</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form asp-action="Create">
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input asp-for="Amount" class="form-control" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-save="modal">Save</button>
+            </div>
+        </duv>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model Standard
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <br />
+    <br />
+    <h3 class="text-center alert-primary">Update Standard</h3>
+    <br />
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="StandardID" />
+                <div class="form-group">
+                    <label asp-for="StandardTitle" class="control-label"></label>
+                    <input asp-for="StandardTitle" class="form-control" />
+                    <span asp-validation-for="StandardTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StandardDesc" class="control-label"></label>
+                    <textarea asp-for="StandardDesc" class="form-control" ></textarea>
+                    <span asp-validation-for="StandardDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

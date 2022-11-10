@@ -1,0 +1,70 @@
+﻿@model School
+
+@{
+    ViewData["Title"] = "EditRegister";
+}
+
+
+
+
+        <br />
+<h3 class="text-center header alert-primary">Update School Profile</h3>
+        <br />
+<hr />
+    <div class="row" >
+<form asp-action="EditRegister">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="SchoolID" />
+    
+        <div class="form-group">
+            <label class="control-label">School Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label">Address</label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label">Email ID</label>
+            <input asp-for="EmailID" class="form-control" />
+            <span asp-validation-for="EmailID" class="text-danger"></span>
+        </div>
+   
+  
+        <div class="form-group">
+            <label class="control-label">Contact No:</label>
+            <input asp-for="ContactNo" class="form-control" />
+            <span asp-validation-for="ContactNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Password</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Establishment Date</label>
+            <input asp-for="EstablishmentDate" class="form-control" />
+            <span asp-validation-for="EstablishmentDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Select Area</label>
+            <select asp-for="AreaID" class="form-control" asp-items="@ViewBag.Area"></select>
+            <span asp-validation-for="AreaID" class="text-danger"></span>
+        </div>
+    
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Update School Profile" class="btn btn-danger " />
+    </div>
+</form>
+    </div>
+
+
+
+

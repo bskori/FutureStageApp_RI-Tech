@@ -1,0 +1,15 @@
+﻿@model IEnumerable<FutureStageApp.ViewModels.QuotaCheckBoxVM>
+
+Testing
+
+    @foreach (var temp in Model)
+    {
+        if (temp.Selected)
+        {
+            @temp.Text <input checked="checked" name="StandardSeatQuota" value="@temp.Value" type="checkbox"> @*<input asp-for="@temp.NoSeats" /> <span>No of seats</span>*@ <br />
+        }
+        else
+        {
+            @temp.Text <input name="StandardSeatQuota" value="@temp.Value" type="checkbox"> @*<input asp-for="@temp.NoSeats" /> <span>No of seats</span>*@ <br />
+        }
+    }

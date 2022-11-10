@@ -1,0 +1,30 @@
+﻿@model IEnumerable<StandardFees>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Standard Fees List</h1>
+<p>
+    <a asp-action="StandardCreateList">Create New</a>
+</p>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Class</th>
+        <th>Fees</th>
+    </tr>
+    @foreach(var temp in Model)
+            {
+                <tr>
+                    <td>@temp.SchoolStandard</td>
+                    <td>@temp.Amount</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@temp.StandardFeesID" class="btn btn-falcon-default">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@temp.StandardFeesID" class="btn btn-falcon-default">Delete</a>
+                    </td>
+                </tr>
+            }
+</table>
+
+

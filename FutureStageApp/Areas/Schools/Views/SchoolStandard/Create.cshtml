@@ -1,0 +1,55 @@
+﻿@model SchoolStandard
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<br />
+<br />
+<br />
+<h1>Add School Standards</h1>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Select Standards</label>
+                <select asp-for="StandardID" asp-items="@ViewBag.Standard" class="form-control"></select>
+                <span asp-validation-for="StandardID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Select School</label>
+                <select asp-for="SchoolID" asp-items="@ViewBag.School"  class="form-control"></select>
+                <span asp-validation-for="SchoolID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Intake Capacity</label>
+                <input asp-for="IntakeCapacity" class="form-control" />
+                <span asp-validation-for="IntakeCapacity" class="text-danger"></span>
+            </div>
+            <div>
+                <div class="form-group">
+                    @await Component.InvokeAsync("QuotaCheckBox")
+                </div>
+            </div>
+            @*<div class="form-group">
+
+                @await Component.InvokeAsync("QuotaRadioButton")
+
+            </div>*@
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

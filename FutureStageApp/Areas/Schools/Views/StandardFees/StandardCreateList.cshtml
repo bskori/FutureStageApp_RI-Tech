@@ -1,0 +1,27 @@
+﻿@model IEnumerable<StandardFees>
+
+
+
+<div id="PlaceHolderHere"></div>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Select Class</th>
+        <th>Select FeeHead</th>
+        <th>Enter Fees</th>
+        <th>Intake Capacity</th>
+        <th></th>
+    </tr>
+    @foreach(var temp in Model)
+            {
+                <tr>
+                    <td>@temp.SchoolStandardID</td>
+                    @*<td>@temp.Standard.StandardTitle</td>
+                    <td>@temp.School.Name</td>
+                    <td>@temp.IntakeCapacity</td>*@
+                    <td>
+                        <a onclick="showInPopup('@Url.Action("Create","StandardFees",null,Context.Request.Scheme)','Add Fees')" class="btn btn-danger">Add Fees</a>
+                    </td>
+                </tr>
+            }
+</table>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Quota>
+
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+            <h3 class="text-center alert-primary">Quota List</h3>
+            <br />
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create New</a>
+            </p>
+            <table class="table table-striped table-hover">
+                <tr class="thead-dark">
+                    <th>Quota ID</th>
+                    <th>Quota Title</th>
+                    <th>Quota Description</th>
+                    <th></th>
+                </tr>
+                @foreach (var temp in Model)
+                {
+                    <tr>
+                        <td>@temp.QuotaID</td>
+                        <td>@temp.QuotaTitle</td>
+                        <td>@temp.QuotaDesc</td>
+
+                        <td>
+                            <a class="btn btn-success" asp-action="Edit" asp-route-id="@temp.QuotaID">Edit</a>
+
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@temp.QuotaID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+
+
+

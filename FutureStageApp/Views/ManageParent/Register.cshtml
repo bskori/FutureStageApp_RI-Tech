@@ -1,0 +1,141 @@
+﻿@model Parent
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/meanmenu.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/nice-select.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/fonts/flaticon.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/magnific-popup.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/odometer.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/animate.min.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/style.css">
+
+    <link rel="stylesheet" href="~/FrontendAssets/assets/css/responsive.css">
+    <title>Jecto - Job Board and Portal HTML Template</title>
+    <link rel="icon" type="image/png" href="~/FrontendAssets/assets/img/favicon.png">
+</head>
+<body>
+
+    <div class="loader">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user-form-area">
+        <div class="container-fluid p-0">
+            <div class="row m-0 align-items-center">
+                <div class="col-lg-6 p-0">
+                    <div class="user-img">
+                        <img src="~/FrontendAssets/assets/img/resgister-bg.jpg" alt="User">
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="user-content">
+                        <div class="top">
+                            <h2>Register</h2>
+                            <form asp-action="Register" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name" asp-for="Name">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Address" asp-for="Address"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email" asp-for="EnailID">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Mobile No">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+                                </div>
+                                <button type="submit" class="btn">Register Here</button><br />
+                                <div><span>Already have an Account?</span>
+                                    <a asp-action="doLogin" asp-controller="ManageParent">Login</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="end">
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-linkedin'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-pinterest-alt'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/FrontendAssets/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="~/FrontendAssets/assets/js/popper.min.js"></script>
+    <script src="~/FrontendAssets/assets/js/bootstrap.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/form-validator.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/contact-form-script.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/jquery.meanmenu.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/jquery.nice-select.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/jquery.mixitup.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/odometer.min.js"></script>
+    <script src="~/FrontendAssets/assets/js/jquery.appear.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/owl.carousel.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/progressbar.min.js"></script>
+
+    <script src="~/FrontendAssets/assets/js/custom.js"></script>
+</body>
+</html>

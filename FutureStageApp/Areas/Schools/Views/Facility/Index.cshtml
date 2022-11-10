@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SchoolFacility>
+
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+            <h1>School Facility List</h1>
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create</a>
+            </p>
+            <table class="table table-striped table-hover">
+                <tr class="thead-dark">
+                    <th>School Facilities</th>
+                    <th>Facilities Description</th>
+                    <th></th>
+                </tr>
+                @foreach(var temp in Model)
+            {
+                <tr>
+
+                    <td>@temp.Facility.FaclilityTitle</td>
+                    <td>@temp.Facility.FaclilityDesc</td>                   
+                    <td>
+                        <a class="btn btn-success"  asp-action="Edit" asp-route-id="@temp.SchoolFacilityID">Edit</a>
+                     
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@temp.SchoolFacilityID">Delete</a>
+                    </td>
+                </tr>
+            }
+            </table>
+        </div>
+    </div>
+
+
+
+

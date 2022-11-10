@@ -1,0 +1,40 @@
+﻿@model FeeHead
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <br />
+    <br />
+
+    <h1>Edit Standard</h1>
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="FeeHeadID" />
+                <div class="form-group">
+                    <label class="control-label">FeeHead Title</label>
+                    <input asp-for="FeeHeadTitle" class="form-control" />
+                    <span asp-validation-for="FeeHeadTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">FeeHead Description</label>
+                    <input asp-for="FeeHeadDesc" class="form-control" />
+                    <span asp-validation-for="FeeHeadDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

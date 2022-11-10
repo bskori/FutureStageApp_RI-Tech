@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Facility>
+
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+            <h3 class="text-center alert-primary">Faclility List</h3>
+            <br />
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create New</a>
+            </p>
+            <table class="table table-striped table-hover">
+                <tr class="thead-dark">
+                    <th>Facility ID</th>
+                    <th>Facility Title</th>
+                    <th>Facility Description</th>
+                    <th></th>
+                </tr>
+                @foreach (var temp in Model)
+                {
+                    <tr>
+                        <td>@temp.FacilityID</td>
+                        <td>@temp.FaclilityTitle</td>
+                        <td>@temp.FaclilityDesc</td>
+
+                        <td>
+                            <a class="btn btn-success" asp-action="Edit" asp-route-id="@temp.FacilityID">Edit</a>
+
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@temp.FacilityID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+
+
+

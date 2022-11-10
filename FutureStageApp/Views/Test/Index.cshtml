@@ -1,0 +1,25 @@
+﻿
+@model City
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" asp-action="SearchCity" asp-controller="Search">
+        <div class="form-group">
+        <label>Search City</label>
+
+            <select asp-for="CityID" asp-items="@ViewBag.City" class="form-control">
+            </select>
+        </div>
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model SchoolFacility
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+    <br />
+    <br />
+    <br />
+    <h1>Create Facility</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label  class="control-label">Select Facility</label>
+                    <select asp-for="FacilityID" asp-items="@ViewBag.Facility" class="form-control" > </select>
+                    <span asp-validation-for="FacilityID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Select School</label>
+                    <select asp-for="SchoolID" asp-items="@ViewBag.School" class="form-control"></select>
+                    <span asp-validation-for="SchoolID" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+

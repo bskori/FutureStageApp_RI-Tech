@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Standard>
+
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+            <h3 class="text-center alert-primary">Standard List</h3>
+            <br />
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create New</a>
+            </p>
+            <table class="table table-striped table-hover">
+                <tr class="thead-dark">
+                    <th>Standard ID</th>
+                    <th>Standard Title</th>
+                    <th>Standard Description</th>
+                    <th></th>
+                </tr>
+                @foreach (var temp in Model)
+                {
+                    <tr>
+                        <td>@temp.StandardID</td>
+                        <td>@temp.StandardTitle</td>
+                        <td>@temp.StandardDesc</td>
+
+                        <td>
+                            <a class="btn btn-success" asp-action="Edit" asp-route-id="@temp.StandardID">Edit</a>
+
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@temp.StandardID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+
+
+

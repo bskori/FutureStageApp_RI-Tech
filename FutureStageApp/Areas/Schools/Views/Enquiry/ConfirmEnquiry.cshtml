@@ -1,0 +1,57 @@
+﻿@model AddmissionConfirmation
+@{
+    ViewData["Title"] = "ConfirmEnquiry";
+}
+
+<div class="contact-form-area pb-100">
+    <div class="container">
+        <div class="form-item">
+            <br />
+            <br />
+            <h2 class="alert-primary text-center">Enquiry Confirmation</h2>
+            <table class="table table-active">
+                <tr>
+                    <td><h6>Enquiry Description : </h6></td>
+                    <td>@ViewBag.EnquiryDescription</td>
+                </tr>
+                <tr>
+                    <td><h6>School Name : </h6></td>
+                    <td>@ViewBag.SchoolName</td>
+                </tr>
+                <tr>
+                    <td><h6>Parent Name : </h6></td>
+                    <td>@ViewBag.ParentName</td>
+                </tr>
+
+            </table>
+            <form asp-action="ConfirmEnquiry" asp-controller="Enquiry" method="post">
+                <div class="row">
+                    <div>
+                        <input asp-for="AddmissionEnquiryID" value="@ViewBag.AdmissionEnquiryID" type="hidden" />
+
+                        <br />
+                        <div class="form-group col-md-6">
+                            <label>Confirmation Date</label>
+                            <input asp-for="ConfirmationDate" cols="30" rows="8" required data-error="Please enter your enquiry" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Remark</label>
+                            <input asp-for="Remark" type="checkbox">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <input type="submit" class="btn btn-danger" value="Confirm" />
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

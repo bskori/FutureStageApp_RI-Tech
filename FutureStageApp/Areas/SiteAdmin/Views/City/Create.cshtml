@@ -1,0 +1,36 @@
+﻿@model City
+
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+<br />
+<h3 class="text-center alert-primary">Add City</h3>
+<br />
+
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">City Name</label>
+                <input asp-for="CityName" class="form-control" />
+                <span asp-validation-for="CityName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">State Name</label>
+                <select asp-for="StateID" class="form-control" asp-items="ViewBag.State"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

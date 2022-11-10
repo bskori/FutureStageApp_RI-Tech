@@ -1,0 +1,31 @@
+﻿@model AddmissionConfirmation
+@{
+    ViewData["Title"] = "ConfirmedEnquiryDetails";
+}
+<br />
+<h4 class="text-center bg-info" style="padding:10px">Confirmed Enquiry Details</h4>
+<br />
+<br />
+<table class="table table-light">
+    <tr>
+        <td><h5>Admission Enquiry ID  </h5></td>
+        <td>:</td>
+        <td>@Model.AddmissionEnquiryID </td>
+    </tr>
+    <tr>
+        <td><h5>Enquiry Description</h5></td>
+        <td>:</td>
+        <td>@Model.AddmissionEnquiry.EnquiryDescription</td>
+    </tr>
+    <tr>
+        <td><h5>Confirmation Date</h5></td>
+        <td>:</td>
+        <td>@Model.ConfirmationDate</td>
+    </tr>
+    <tr>
+        <td><h5>Remark</h5></td>
+        <td>:</td>
+        <td>@Model.Remark</td>
+    </tr>
+</table>
+

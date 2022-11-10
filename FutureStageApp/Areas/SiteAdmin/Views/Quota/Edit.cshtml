@@ -1,0 +1,40 @@
+﻿@model Quota
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <br />
+    <br />
+    <h3 class="text-center alert-primary">Update Quota</h3>
+    <br />
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="QuotaID" />
+                <div class="form-group">
+                    <label class="control-label">Quota Title</label>
+                    <input asp-for="QuotaTitle" class="form-control" />
+                    <span asp-validation-for="QuotaTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Quota Description</label>
+                    <textarea asp-for="QuotaDesc" class="form-control" ></textarea>
+                    <span asp-validation-for="QuotaDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

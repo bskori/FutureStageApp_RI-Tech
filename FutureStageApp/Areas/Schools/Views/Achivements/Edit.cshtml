@@ -1,0 +1,45 @@
+﻿@model SchoolAchivement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <br />
+    <br />
+
+    <h1>Update School Achivements</h1>
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-10">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="SchoolAchivementID" />
+                <div class="form-group">
+                    <label class="control-label">School Achivement Date</label>
+                    <input asp-for="SchoolAchivementDate" class="form-control" />
+                    <span asp-validation-for="SchoolAchivementDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Title</label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Title</label>
+                    <input asp-for="Desc" class="form-control" />
+                    <span asp-validation-for="Desc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

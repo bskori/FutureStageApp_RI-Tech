@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AddmissionPrerequisite>
+<br />
+<h2>Admission Prerequisites List</h2>
+<br />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<hr />
+<table class="table table-striped table-hover">
+    <tr class="thead-light">
+        <th>Admission Prerequisite ID</th>
+        <th>Admission Prerequisite</th>
+        <th>Addmission Description</th>
+        
+    </tr>
+    @foreach(var temp in Model)
+            {
+                <tr>
+                    <td>@temp.AddmissionPrerequisiteID</td>
+                    <td>@temp.PrerequisiteTitle</td>
+                    <td>@temp.PrerequisiteDesc</td>
+                    
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@temp.AddmissionPrerequisiteID" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@temp.AddmissionPrerequisiteID" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+</table>
+
+

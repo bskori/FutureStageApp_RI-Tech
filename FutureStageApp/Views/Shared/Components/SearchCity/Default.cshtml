@@ -1,0 +1,30 @@
+﻿
+
+<div class="col-lg-4">
+    <div class="form-group">
+
+        <select id="City">
+            <option value="-1"> Select City </option>
+            @foreach (var city in ViewBag.City)
+            {
+                <option value="@city.CityID">@city.CityName</option>
+            }
+        </select>
+    </div>
+</div>
+
+<div class="col-lg-4">
+    <div class="form-group">
+
+        <select id="Area" class="form-control">
+            <option value="-1"> Select City </option>
+            @foreach (var area in ViewBag.Area)
+            {
+                <option value="@area.AreaID">@area.AreaName</option>
+            }
+        </select>
+    </div>
+</div>
+
+
+

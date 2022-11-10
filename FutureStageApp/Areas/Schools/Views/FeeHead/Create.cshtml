@@ -1,0 +1,39 @@
+﻿@model FeeHead
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+    <br />
+    <br />
+    <br />
+    <h1>Create FeeHead</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label  class="control-label">FeeHead Title</label>
+                    <input asp-for="FeeHeadTitle" class="form-control" />
+                    <span asp-validation-for="FeeHeadTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">FeeHead Description</label>
+                    <textarea asp-for="FeeHeadDesc" class="form-control" ></textarea>
+                    <span asp-validation-for="FeeHeadDesc" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-danger" asp-action="Index">Back to List</a>
+    </div>
+
+

@@ -1,0 +1,36 @@
+﻿@model AddmissionConfirmation
+
+@{
+    Layout = null;
+}
+
+<h1>EnquiryConfirmed</h1>
+
+<div>
+    <h4>AddmissionConfirmation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddmissionEnquiry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddmissionEnquiry.AddmissionEnquiryID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ConfirmationDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ConfirmationDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AddmissionConfirmationID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
